@@ -1,5 +1,7 @@
 <template>
   <div id="app" class="views">
+    
+
     <!-- Your main view, should have "view-main" class -->
     <div class="view view-main">
       <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
@@ -32,6 +34,9 @@
         </div>
       </div>
     </div>
+
+    <!-- -->
+
   </div>
 </template>
 
@@ -41,11 +46,24 @@ import Framework7 from 'Framework7'
 import Framework7OS from 'Framework7/dist/css/framework7.material.min.css'
 import Framework7Colors from 'Framework7/dist/css/framework7.material.colors.min.css' 
 
+
 export default {
   name: 'app',
-  components: {
-    Hello
-  }
+  components: {},
+  mounted: function(){
+    var myApp = new window.Framework7({
+        //pushState: true,
+        //swipePanel: 'left'
+        // ... other parameters
+    });
+
+    /* Initialize views */
+    var mainView = myApp.addView('.view-main', {
+      dynamicNavbar: true
+    });
+    //var anotherView = myApp.addView('.another-view');
+
+  } // mounted
 }
 </script>
 
