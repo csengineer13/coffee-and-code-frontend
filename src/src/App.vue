@@ -1,7 +1,37 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div id="app" class="views">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+      <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+      <div class="pages navbar-fixed toolbar-fixed">
+        <!-- Page, "data-page" contains page name -->
+        <div data-page="index" class="page">
+
+          <!-- Top Navbar. In Material theme it should be inside of the page-->
+          <div class="navbar">
+            <div class="navbar-inner">
+              <div class="center">Awesome App</div>
+            </div>
+          </div>
+
+          <!-- Toolbar. In Material theme it should be inside of the page-->
+          <div class="toolbar">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <p>Page content goes here</p>
+            <!-- Link to another page -->
+            <a href="about.html">About app</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
