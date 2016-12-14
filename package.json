@@ -18,7 +18,6 @@
   "homepage": "https://github.com/csengineer13/coffee-and-code-frontend#readme",
   "dependencies": {
     "framework7": "^1.5.0",
-    "vue": "^2.1.6",
     "yarn": "^0.17.10"
   }
 }
