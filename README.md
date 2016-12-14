@@ -21,8 +21,8 @@ A record of the steps followed to add the apps dependencies and init scaffolded 
 
 ### To Do:
 
+- Gulp to pull files from node_modules into `/src/static`
 - Remove packages.json at top app level
 - Get basic routing and magic working with the Framework7 + vue setup
-- Get `npm run build` to port everything over to `/app` folder as `dist` content
 - Configure environment for testing on app
 - Setup build credentials for android app stuff through XDK
