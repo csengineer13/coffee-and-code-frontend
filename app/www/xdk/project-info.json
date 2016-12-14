@@ -3,7 +3,7 @@
   "signatureVersion": 1,
   "xdkVersion": "3759",
   "usesAppDesigner": "false",
-  "projectGuid": "bd710e93-43ee-4d53-8222-f8a79dd2e680",
+  "projectGuid": "2afe4faa-4d04-479d-ac0f-7859672dd518",
   "projectTypeName": "com.intel.xdk.projecttype.jsapp",
   "src": "jsapp/template-blank-cordova-project-lite/sample.zip"
 }
