@@ -6,7 +6,10 @@
 </template>
 
 <script>
-import Hello from './components/Hello'
+// Framework7
+import Framework7 from 'Framework7'
+import Framework7OS from 'Framework7/dist/css/framework7.material.min.css'
+import Framework7Colors from 'Framework7/dist/css/framework7.material.colors.min.css' 
 
 export default {
   name: 'app',
@@ -17,12 +20,4 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
