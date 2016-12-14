@@ -17,3 +17,12 @@ A record of the steps followed to add the apps dependencies and init scaffolded 
 - [yarn](https://www.npmjs.com/package/yarn)
 - [Framework7](http://framework7.io/docs/)
 - [vue-cli](https://github.com/vuejs-templates/webpack)
+
+
+### To Do:
+
+- Remove packages.json at top app level
+- Get basic routing and magic working with the Framework7 + vue setup
+- Get `npm run build` to port everything over to `/app` folder as `dist` content
+- Configure environment for testing on app
+- Setup build credentials for android app stuff through XDK
