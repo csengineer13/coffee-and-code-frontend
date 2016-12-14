@@ -2,6 +2,8 @@
 # in essence, everything but *.xdk file and www directory
 /*
 !/www
+www/static
+www/index.html
 !/docs
 !/config.xml
 !/README.md
