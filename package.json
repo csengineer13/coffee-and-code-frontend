@@ -1,0 +1,22 @@
+{
+  "name": "coffee-and-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csengineer13/coffee-and-code-frontend.git"
+  },
+  "author": "Danny Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csengineer13/coffee-and-code-frontend/issues"
+  },
+  "homepage": "https://github.com/csengineer13/coffee-and-code-frontend#readme",
+  "dependencies": {
+    "yarn": "^0.17.10"
+  }
+}
