@@ -56,7 +56,24 @@
 
             <!-- Scrollable page content -->
             <div class="page-content">
-              <p>Home Page</p>
+              <div class="content-block-title">Songs</div>
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <a href="#" class="item-link item-content">
+                      <div class="item-media"><img src="http://placehold.it/80x80" width="80"></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title">Yellow Submarine</div>
+                          <div class="item-after">$15</div>
+                        </div>
+                        <div class="item-subtitle">Beatles</div>
+                        <div class="item-text">Lorem ipsum dolor sit amet...</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
           </div>
