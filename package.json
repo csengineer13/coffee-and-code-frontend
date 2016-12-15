@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/csengineer13/coffee-and-code-frontend#readme",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "framework7": "^1.5.0",
     "yarn": "^0.17.10"
   }
