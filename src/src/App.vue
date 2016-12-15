@@ -66,6 +66,7 @@
                         <div class="item-title-row">
                           <div class="item-title">Yellow Submarine</div>
                           <div class="item-after">$15</div>
+                          <div class="item-after">40 oz &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></div>
                         </div>
                         <div class="item-subtitle">Beatles</div>
                         <div class="item-text">Lorem ipsum dolor sit amet...</div>
