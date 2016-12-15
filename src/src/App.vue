@@ -48,10 +48,11 @@ export default {
   name: 'app',
   components: {},
   mounted: function(){
-    var myApp = new window.Framework7({
-        //pushState: true,
-        //swipePanel: 'left'
-        // ... other parameters
+    window.myApp = new window.Framework7({
+        root: '#app',
+        material: true,             // Android
+        materialPageLoadDelay: 50,  // Performance increase
+        domCache: true              // https://framework7.io/docs/pages-inline.html
     });
 
     /* Initialize views */
