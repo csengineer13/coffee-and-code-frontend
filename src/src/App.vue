@@ -1,43 +1,71 @@
 <template>
-  <div id="app" class="views">
-    
+  <div id="app">
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+          
 
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main">
-      <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
-      <div class="pages navbar-fixed toolbar-fixed">
-        <!-- Page, "data-page" contains page name -->
-        <div data-page="index" class="page">
+          <!-- All pages, except initial, should have 'cached' class -->
+          <!-- data-page=* is pageName -->
+          <div class="page" data-page="about">
 
-          <!-- Top Navbar. In Material theme it should be inside of the page-->
-          <div class="navbar">
-            <div class="navbar-inner">
-              <div class="center">Awesome App</div>
+            <!-- Navbar -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Awesome App</div>
+              </div>
+            </div>
+            <!-- /Navbar -->
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="link" @click="routeToPage('index', $event)">Home</a>
+                <a href="#" class="link">Link 2</a>
+              </div>
+            </div>
+            <!-- /Toolbar -->
+
+            <div class="page-content">
+              <p>About Page</p>
             </div>
           </div>
+          <!-- /About -->
 
-          <!-- Toolbar. In Material theme it should be inside of the page-->
-          <div class="toolbar">
-            <div class="toolbar-inner">
-              <!-- Toolbar links -->
-              <a href="#" class="link">Link 1</a>
-              <a href="#" class="link">Link 2</a>
+          <!-- Page, "data-page" contains page name -->
+          <div class="page" data-page="index">
+
+            <!-- Top Navbar -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Awesome App</div>
+              </div>
             </div>
+            <!-- /Top Navbar -->
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="link" @click="routeToPage('about', $event)">About</a>
+                <a href="#" class="link">Link 2</a>
+              </div>
+            </div>
+            <!-- /Toolbar -->
+
+            <!-- Scrollable page content -->
+            <div class="page-content">
+              <p>Home Page</p>
+            </div>
+
           </div>
+          <!-- /index -->
 
-          <!-- Scrollable page content -->
-          <div class="page-content">
-            <p>Page content goes here</p>
-            <!-- Link to another page -->
-            <a href="about.html">About app</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- -->
-
-  </div>
+        </div><!-- /pages -->
+      </div><!-- /view -->
+    </div><!-- /views -->
+  </div><!-- /app -->
 </template>
 
 <script>
@@ -66,7 +94,14 @@ export default {
     /* Init Main View */
     this.mainView = this.myApp.addView('.view-main', {});
 
-  } // mounted
+  }, // mounted
+  methods: {
+    routeToPage: function (pageName, evt) 
+    {
+      evt.preventDefault();
+      this.mainView.router.load({pageName: pageName});
+    }
+  }
 }
 </script>
 
