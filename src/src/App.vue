@@ -41,8 +41,7 @@
               <div class="navbar-inner">
                 <div class="center">Awesome App</div>
               </div>
-            </div>
-            <!-- /Top Navbar -->
+            </div><!-- /Top Navbar -->
 
             <!-- Toolbar -->
             <div class="toolbar">
@@ -51,34 +50,41 @@
                 <a href="#" class="link" @click="routeToPage('about', $event)">About</a>
                 <a href="#" class="link">Link 2</a>
               </div>
-            </div>
-            <!-- /Toolbar -->
+            </div><!-- /Toolbar -->
 
             <!-- Scrollable page content -->
             <div class="page-content">
-              <div class="content-block-title">Songs</div>
+              <div class="content-block-title">Users</div>
+              
               <div class="list-block media-list">
                 <ul>
+
                   <li>
                     <a href="#" class="item-link item-content">
                       <div class="item-media"><img src="http://placehold.it/80x80" width="80"></div>
                       <div class="item-inner">
                         <div class="item-title-row">
-                          <div class="item-title">Yellow Submarine</div>
-                          <div class="item-after">$15</div>
+                          <div class="item-title">Danny Brown</div>
                           <div class="item-after">40 oz &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></div>
                         </div>
-                        <div class="item-subtitle">Beatles</div>
-                        <div class="item-text">Lorem ipsum dolor sit amet...</div>
+                        <!--<div class="item-subtitle">C# .NET Developer</div>-->
+                        <div class="item-text">
+                          <ul style="list-style-type: square; padding-left: 20px;">
+                            <li>asd</li>
+                            <li>asd</li>
+                          </ul>
+                        </div>
                       </div>
                     </a>
                   </li>
-                </ul>
-              </div>
-            </div>
 
-          </div>
-          <!-- /index -->
+                </ul><!-- /list -->
+              </div><!-- /list-block -->
+
+            </div><!-- /page-content -->
+
+          </div><!-- /page:index -->
+
 
         </div><!-- /pages -->
       </div><!-- /view -->
