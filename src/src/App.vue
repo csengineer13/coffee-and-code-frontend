@@ -47,19 +47,24 @@ import Framework7 from 'Framework7'
 export default {
   name: 'app',
   components: {},
-  mounted: function(){
-    window.myApp = new window.Framework7({
-        root: '#app',
+  data: function(){
+    return {
+      myApp: undefined,
+      mainView: undefined
+    }
+  },
+  mounted: function()
+  {
+    /* Init Framework7 */
+    this.myApp = new window.Framework7({
+        root: '#app',               // Vue is not a fan of mounting to body
         material: true,             // Android
         materialPageLoadDelay: 50,  // Performance increase
         domCache: true              // https://framework7.io/docs/pages-inline.html
     });
 
-    /* Initialize views */
-    var mainView = myApp.addView('.view-main', {
-      dynamicNavbar: true
-    });
-    //var anotherView = myApp.addView('.another-view');
+    /* Init Main View */
+    this.mainView = this.myApp.addView('.view-main', {});
 
   } // mounted
 }
