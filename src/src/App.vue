@@ -187,6 +187,9 @@ export default {
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
     },
+    refreshUsers: function(evt){
+      // not implemented
+    },
     routeToPage: function (pageName, evt) 
     {
       evt.preventDefault();
