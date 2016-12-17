@@ -1,5 +1,7 @@
 # coffee-and-code-frontend
 
+Simple hybrid app front-end that combines all things vuejs with framework7 and intel xdk to create a fast, easy, and fun development experience (:
+
 ## Getting Started
 
 _First Time Setup_
@@ -13,6 +15,8 @@ _Developing_
 2. From `/src`: `npm run dev` 
 
 
+## Project Resources
+
 ### Libraries, Frameworks, and Packages; oh my!
 
 - [Framework7](http://framework7.io/docs/)
@@ -25,7 +29,7 @@ _Developing_
 	- Explained: [Webpack Fundamentals](https://app.pluralsight.com/library/courses/webpack-fundamentals/table-of-contents)
 - [json-server](https://github.com/typicode/json-server)
 
-### To Do:
+### Running Todo List
 
 #### Version 1
 
