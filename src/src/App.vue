@@ -1,5 +1,62 @@
 <template>
   <div id="app">
+
+    <div class="login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+
+            <div class="login-screen-title">Enter Pin</div>
+            
+            <form>
+              <div class="content-block">
+                <div class="pin-container">
+                  <div class="pin-placeholder empty">&#8226;</div>
+                  <div class="pin-placeholder empty">&#8226;</div>
+                  <div class="pin-placeholder empty"></div>
+                  <div class="pin-placeholder empty"></div>
+                </div>
+              </div>
+
+
+              <div class="list-block">
+                <div class="list-block-label">
+                  <p>Some text with login information.</p>
+                  <p><a href="#" class="close-login-screen">Close Login Screen</a></p>
+                </div>
+              </div>
+
+              <div class="content-block">
+                <p class="buttons-row">
+                  <a href="#" class="button button-fill color-blue">1</a>
+                  <a href="#" class="button button-fill color-blue">2</a>
+                  <a href="#" class="button button-fill color-blue">3</a>
+                </p>
+                <p class="buttons-row">
+                  <a href="#" class="button button-fill color-blue">4</a>
+                  <a href="#" class="button button-fill color-blue">5</a>
+                  <a href="#" class="button button-fill color-blue">6</a>
+                </p>
+                <p class="buttons-row">
+                  <a href="#" class="button button-fill color-blue">7</a>
+                  <a href="#" class="button button-fill color-blue">8</a>
+                  <a href="#" class="button button-fill color-blue">9</a>
+                </p>
+                <p class="buttons-row">
+                  <a href="#" class="button button-fill color-red">Clear</a>
+                  <a href="#" class="button button-fill color-blue">0</a>
+                  <a href="#" class="button button-fill color-green" @click="signIn">Submit</a>
+                </p>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- /login-screen -->
+
+
+
     <div class="views">
       <div class="view view-main">
         <div class="pages navbar-fixed toolbar-fixed">
@@ -131,4 +188,31 @@ export default {
 </script>
 
 <style>
+  .pin-placeholder {
+    width: 50px;
+    height: 50px;
+    margin: 0 3px;
+    border: 1px solid black;
+
+    font-size: 22px;
+    line-height: 48px;
+    text-align: center;
+
+    float: left;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  .pin-container::after {
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+
+  .pin-container {
+    margin: 0 auto;
+    width: 225px;
+  }
 </style>
