@@ -1,23 +1,23 @@
 # coffee-and-code-frontend
 
-### Blank Project Setup Steps
+## Getting Started
 
-A record of the steps followed to add the apps dependencies and init scaffolded code from scratch.
+_First Time Setup_
 
-- `npm install --save yarn`
-- `yarn add framework7`
-- `yarn global add vue-cli@latest` and/or `npm install --save -g vue-cli`
-- `vue init webpack src`
-- `cd src`
-- `npm install`
-- `npm run dev`
-- Create new blank XDK HTML + Cordova project at `/app`
+`npm install -g json-server`
 
 
-- [yarn](https://www.npmjs.com/package/yarn)
+_Developing_
+
+1. `json-server --watch db.json` to turn on "fake api"
+
+
+### Libraries, Frameworks, and Packages; oh my!
+
 - [Framework7](http://framework7.io/docs/)
 - [vue-cli](https://github.com/vuejs-templates/webpack)
-
+- Webpack
+- [json-server](https://github.com/typicode/json-server)
 
 ### To Do:
 
