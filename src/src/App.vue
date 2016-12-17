@@ -29,6 +29,7 @@
 
             <div class="page-content">
               <p>About Page</p>
+                  <!-- <img style="width: 10%;" src="./assets/coffee-cup.png" /> -->
             </div>
           </div>
           <!-- /About -->
