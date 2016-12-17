@@ -1,6 +1,13 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "users": [
+    { "id": 1, "name": "Danny Brown", "userPicUrl": "https://api.adorable.io/avatars/80/dbrown%40gohomeside.com", 
+      "coffeeToday": 40, "lastCoffee": "", "waterToday": 0, "lastWater": "" },
+    { "id": 2, "name": "Shawn Fultz", "userPicUrl": "https://api.adorable.io/avatars/80/sfultz%40gohomeside.com", 
+      "coffeeToday": 40, "lastCoffee": "", "waterToday": 0, "lastWater": "" },
+    { "id": 3, "name": "Austin Murphy", "userPicUrl": "https://api.adorable.io/avatars/80/amurphy%40gohomeside.com", 
+      "coffeeToday": 40, "lastCoffee": "", "waterToday": 0, "lastWater": "" },
+    { "id": 4, "name": "Sean O'Callahan", "userPicUrl": "https://api.adorable.io/avatars/80/socallahan%40gohomeside.com", 
+      "coffeeToday": 40, "lastCoffee": "", "waterToday": 0, "lastWater": "" }
   ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
