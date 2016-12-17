@@ -110,16 +110,16 @@
             <!-- Top Navbar -->
             <div class="navbar">
               <div class="navbar-inner">
-                <div class="center">Awesome App</div>
+                <div class="center">fastidious</div>
               </div>
             </div><!-- /Top Navbar -->
 
             <!-- Toolbar -->
-            <div class="toolbar">
+            <div class="toolbar toolbar-bottom">
               <div class="toolbar-inner">
                 <!-- Toolbar links -->
                 <a href="#" class="link" @click="routeToPage('about', $event)">About</a>
-                <a href="#" class="link">Link 2</a>
+                <a href="#" class="link" @click="refreshUsers">Refresh Users</a>
               </div>
             </div><!-- /Toolbar -->
 
