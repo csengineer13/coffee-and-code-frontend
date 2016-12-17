@@ -21,8 +21,23 @@ A record of the steps followed to add the apps dependencies and init scaffolded 
 
 ### To Do:
 
+##### Version 1
+
+_Front End_
+
 - Gulp to pull files from node_modules into `/src/static`
 - Remove packages.json at top app level
 - Get basic routing and magic working with the Framework7 + vue setup
 - Configure environment for testing on app
 - Setup build credentials for android app stuff through XDK
+- Add VueX for state management
+- Create interfaces for expected schema
+- Mock out all API communications
+	- https://github.com/typicode/json-server
+
+_Back End_
+
+- .NET Core for funsies and linux-y hosting?
+- Static store of users
+- Stats model with inheritence
+- Implemented mocked endpoints
