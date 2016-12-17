@@ -178,6 +178,12 @@ export default {
 
   }, // mounted
   methods: {
+    signIn: function(evt)
+    {
+      var loginScreen = this.myApp.loginScreen();
+      this.myApp.closeModal(loginScreen);
+      this.mainView.router.load({pageName: 'about'});
+    },
     routeToPage: function (pageName, evt) 
     {
       evt.preventDefault();
