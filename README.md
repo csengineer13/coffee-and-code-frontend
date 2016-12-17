@@ -9,14 +9,20 @@ _First Time Setup_
 
 _Developing_
 
-1. `json-server --watch db.json` to turn on "fake api"
+1. From root: `json-server --watch db.json` to turn on "fake api"
+2. From `/src`: `npm run dev` 
 
 
 ### Libraries, Frameworks, and Packages; oh my!
 
 - [Framework7](http://framework7.io/docs/)
 - [vue-cli](https://github.com/vuejs-templates/webpack)
-- Webpack
+	- Explained: [GitBook](http://vuejs-templates.github.io/webpack/)
+	- Generates starter project with: vuejs, vuex, webpack, etc.
+- [VueJS](https://vuejs.org/v2/guide/)
+- [VueX](https://vuex.vuejs.org/en/getting-started.html)
+- [Webpack](https://webpack.github.io/)
+	- Explained: [Webpack Fundamentals](https://app.pluralsight.com/library/courses/webpack-fundamentals/table-of-contents)
 - [json-server](https://github.com/typicode/json-server)
 
 ### To Do:
