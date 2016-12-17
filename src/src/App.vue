@@ -131,7 +131,9 @@
                 <ul>
 
                   <li>
-                    <media-list-item></media-list-item>
+                    <media-list-item
+                      media-image="https://api.adorable.io/avatars/80/dbrown%40gohomeside.com"
+                    ></media-list-item>
                   </li>
 
                 </ul><!-- /list -->
