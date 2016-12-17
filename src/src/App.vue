@@ -184,6 +184,9 @@ export default {
       this.myApp.closeModal(loginScreen);
       this.mainView.router.load({pageName: 'about'});
     },
+    signOut: function(evt){
+      this.mainView.router.load({pageName: 'index'});
+    },
     routeToPage: function (pageName, evt) 
     {
       evt.preventDefault();
