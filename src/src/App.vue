@@ -118,22 +118,7 @@
                 <ul>
 
                   <li>
-                    <a href="#" class="item-link item-content">
-                      <div class="item-media"><img src="http://placehold.it/80x80" width="80"></div>
-                      <div class="item-inner">
-                        <div class="item-title-row">
-                          <div class="item-title">Danny Brown</div>
-                          <div class="item-after">40 oz &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></div>
-                        </div>
-                        <!--<div class="item-subtitle">C# .NET Developer</div>-->
-                        <div class="item-text">
-                          <ul style="list-style-type: square; padding-left: 20px;">
-                            <li>asd</li>
-                            <li>asd</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </a>
+                    <media-list-item></media-list-item>
                   </li>
 
                 </ul><!-- /list -->
@@ -153,10 +138,13 @@
 <script>
 // Framework7
 import Framework7 from 'Framework7'
+import MediaListItem from './components/MediaListItem'
 
 export default {
   name: 'app',
-  components: {},
+  components: {
+    MediaListItem
+  },
   data: function(){
     return {
       myApp: undefined,
