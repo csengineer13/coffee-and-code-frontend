@@ -69,24 +69,37 @@
             <!-- Navbar -->
             <div class="navbar">
               <div class="navbar-inner">
-                <div class="center">Awesome App</div>
+                <div class="center">Coffee <i class="fa fa-heart" aria-hidden="true"></i></div>
               </div>
             </div>
             <!-- /Navbar -->
 
             <!-- Toolbar -->
-            <div class="toolbar">
+            <div class="toolbar toolbar-bottom">
               <div class="toolbar-inner">
                 <!-- Toolbar links -->
-                <a href="#" class="link" @click="routeToPage('index', $event)">Home</a>
-                <a href="#" class="link">Link 2</a>
+                <a href="#" class="link" @click="signOut">Sign Out</a>
               </div>
             </div>
             <!-- /Toolbar -->
 
             <div class="page-content">
-              <p>About Page</p>
+              <div class="content-block-title">Add Coffee Intake</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p class="buttons-row">
+                    <a href="#" class="button button-raised button-fill color-red">4 oz</a>
+                    <a href="#" class="button button-raised button-fill color-green">6 oz</a>
+                    <a href="#" class="button button-raised button-fill color-blue">8 oz</a>
+                  </p>
+                  <p class="buttons-row">
+                    <a href="#" class="button button-raised button-fill color-orange">10 oz</a>
+                    <a href="#" class="button button-raised button-fill color-pink">12 oz</a>
+                    <a href="#" class="button button-raised button-fill color-purple">16 oz</a>
+                  </p>
                   <!-- <img style="width: 10%;" src="./assets/coffee-cup.png" /> -->
+                </div>
+              </div>
             </div>
           </div>
           <!-- /About -->
