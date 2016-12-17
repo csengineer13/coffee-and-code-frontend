@@ -21,7 +21,7 @@ A record of the steps followed to add the apps dependencies and init scaffolded 
 
 ### To Do:
 
-##### Version 1
+#### Version 1
 
 _Front End_
 
