@@ -11,10 +11,10 @@
             <form>
               <div class="content-block">
                 <div class="pin-container">
-                  <div class="pin-placeholder empty">&#8226;</div>
-                  <div class="pin-placeholder empty">&#8226;</div>
-                  <div class="pin-placeholder empty"></div>
-                  <div class="pin-placeholder empty"></div>
+                  <div class="pin-placeholder" :class="{ 'has-value': pin.length > 0 }"></div>
+                  <div class="pin-placeholder" :class="{ 'has-value': pin.length > 1 }"></div>
+                  <div class="pin-placeholder" :class="{ 'has-value': pin.length > 2 }"></div>
+                  <div class="pin-placeholder" :class="{ 'has-value': pin.length > 3 }"></div>
                 </div>
               </div>
 
@@ -28,23 +28,23 @@
 
               <div class="content-block">
                 <p class="buttons-row">
-                  <a href="#" class="button button-fill color-blue">1</a>
-                  <a href="#" class="button button-fill color-blue">2</a>
-                  <a href="#" class="button button-fill color-blue">3</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('1')">1</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('2')">2</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('3')">3</a>
                 </p>
                 <p class="buttons-row">
-                  <a href="#" class="button button-fill color-blue">4</a>
-                  <a href="#" class="button button-fill color-blue">5</a>
-                  <a href="#" class="button button-fill color-blue">6</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('4')">4</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('5')">5</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('6')">6</a>
                 </p>
                 <p class="buttons-row">
-                  <a href="#" class="button button-fill color-blue">7</a>
-                  <a href="#" class="button button-fill color-blue">8</a>
-                  <a href="#" class="button button-fill color-blue">9</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('7')">7</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('8')">8</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('9')">9</a>
                 </p>
                 <p class="buttons-row">
                   <a href="#" class="button button-fill color-red">Clear</a>
-                  <a href="#" class="button button-fill color-blue">0</a>
+                  <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('0')">0</a>
                   <a href="#" class="button button-fill color-green" @click="signIn">Submit</a>
                 </p>
               </div>
@@ -172,7 +172,8 @@ export default {
     return {
       myApp: undefined,
       mainView: undefined,
-      users: []
+      users: [],
+      pin: ""
     }
   },
   mounted: function()
@@ -204,6 +205,9 @@ export default {
       // todo: set user attempting to auth
       // Open pin screen
       this.myApp.loginScreen();
+    },
+    pinNumberTapped: function(number){
+      this.pin += number;
     },
     refreshUsers: function(evt)
     {
@@ -244,6 +248,10 @@ export default {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+  }
+
+  .pin-placeholder.has-value::after{
+    content: "•";
   }
 
   .pin-container::after {
