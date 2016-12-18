@@ -170,6 +170,7 @@ export default {
     return {
       myApp: undefined,
       mainView: undefined
+      users: []
     }
   },
   mounted: function()
@@ -196,8 +197,19 @@ export default {
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
     },
-    refreshUsers: function(evt){
-      // not implemented
+    refreshUsers: function(evt)
+    {
+      var vm = this;
+
+      $$.ajax({
+        method: "GET",
+        url: 'http://localhost:3000/users',
+        cache: false,
+        success: function(data, status, xhr){
+          var object = JSON.parse(data);
+          vm.users = object; 
+        }
+      });
     },
     routeToPage: function (pageName, evt) 
     {
