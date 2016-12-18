@@ -1,9 +1,9 @@
 <template>
     <a href="#" class="item-link item-content">
-      <div class="item-media"><img v-bind:src="mediaImage" width="80"></div>
+      <div class="item-media circle-mask"><img v-bind:src="mediaImage" width="80"></div>
       <div class="item-inner">
         <div class="item-title-row">
-          <div class="item-title">Danny Brown</div>
+          <div class="item-title">{{name}}</div>
           <div class="item-after">40 oz &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></div>
         </div>
         <!--<div class="item-subtitle">C# .NET Developer</div>-->
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'media-list-item',
-  props: ['media-image'],
+  props: ['media-image', 'name'],
   data: function(){
   	return {
 
@@ -31,4 +31,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.circle-mask img {
+	border-radius: 6px;
+}
 </style>

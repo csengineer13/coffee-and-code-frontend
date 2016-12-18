@@ -130,9 +130,11 @@
               <div class="list-block media-list">
                 <ul>
 
-                  <li>
+                  <li v-for="user in users">
                     <media-list-item
-                      media-image="https://api.adorable.io/avatars/80/dbrown%40gohomeside.com"
+                      @click.native="userTapped"
+                      v-bind:media-image="user.userPicUrl"
+                      v-bind:name="user.name"
                     ></media-list-item>
                   </li>
 
@@ -169,7 +171,7 @@ export default {
   data: function(){
     return {
       myApp: undefined,
-      mainView: undefined
+      mainView: undefined,
       users: []
     }
   },
@@ -196,6 +198,12 @@ export default {
     },
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
+    },
+    userTapped: function(evt)
+    {
+      // todo: set user attempting to auth
+      // Open pin screen
+      this.myApp.loginScreen();
     },
     refreshUsers: function(evt)
     {
