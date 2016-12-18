@@ -43,7 +43,7 @@
                   <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('9')">9</a>
                 </p>
                 <p class="buttons-row">
-                  <a href="#" class="button button-fill color-red">Clear</a>
+                  <a href="#" class="button button-fill color-red" @click="clearPinNumberTapped">Clear</a>
                   <a href="#" class="button button-fill color-blue" @click="pinNumberTapped('0')">0</a>
                   <a href="#" class="button button-fill color-green" @click="signIn">Submit</a>
                 </p>
@@ -233,8 +233,13 @@ export default {
       // Open pin screen
       this.myApp.loginScreen();
     },
+    clearPinNumberTapped: function(){
+      this.pin = "";
+    },
     pinNumberTapped: function(number){
-      this.pin += number;
+      if(this.pin.length < 4){
+        this.pin += number;
+      }
     },
     refreshUsers: function(evt)
     {
