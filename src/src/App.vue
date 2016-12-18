@@ -78,6 +78,33 @@
             <div class="toolbar toolbar-bottom">
               <div class="toolbar-inner">
                 <!-- Toolbar links -->
+                <a href="#" class="link" @click="routeToPage('index', $event)">Home</a>
+              </div>
+            </div>
+            <!-- /Toolbar -->
+
+            <div class="page-content">
+            </div>
+          </div>
+          <!-- /About -->
+
+
+          <!-- All pages, except initial, should have 'cached' class -->
+          <!-- data-page=* is pageName -->
+          <div class="page" data-page="questions">
+
+            <!-- Navbar -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Coffee <i class="fa fa-heart" aria-hidden="true"></i></div>
+              </div>
+            </div>
+            <!-- /Navbar -->
+
+            <!-- Toolbar -->
+            <div class="toolbar toolbar-bottom">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
                 <a href="#" class="link" @click="signOut">Sign Out</a>
               </div>
             </div>
@@ -102,7 +129,7 @@
               </div>
             </div>
           </div>
-          <!-- /About -->
+          <!-- /Questions -->
 
           <!-- Page, "data-page" contains page name -->
           <div class="page" data-page="index">
@@ -195,7 +222,7 @@ export default {
     {
       var loginScreen = this.myApp.loginScreen();
       this.myApp.closeModal(loginScreen);
-      this.mainView.router.load({pageName: 'about'});
+      this.mainView.router.load({pageName: 'questions'});
     },
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
