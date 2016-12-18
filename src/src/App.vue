@@ -152,8 +152,14 @@
 
 <script>
 // Framework7
+//import Vue from 'vue'
+//import Vuex from 'vuex'
 import Framework7 from 'Framework7'
 import MediaListItem from './components/MediaListItem'
+var $$ = Dom7;
+
+// Kickstart vuex
+//Vue.use(Vuex);
 
 export default {
   name: 'app',
