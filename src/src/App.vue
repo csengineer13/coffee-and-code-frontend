@@ -111,18 +111,22 @@
             <!-- /Toolbar -->
 
             <div class="page-content">
+
+            <h1>{{activeUser.coffeeToday}} oz <i class="fa fa-coffee" aria-hidden="true"></i></h1>
+            <span class="subheading">and counting (:</span>
+
               <div class="content-block-title">Add Coffee Intake</div>
               <div class="content-block">
                 <div class="content-block-inner">
                   <p class="buttons-row">
-                    <a href="#" class="button button-raised button-fill color-red">4 oz</a>
-                    <a href="#" class="button button-raised button-fill color-green">6 oz</a>
-                    <a href="#" class="button button-raised button-fill color-blue">8 oz</a>
+                    <a href="#" class="button button-raised button-fill color-red" @click="addCoffee(4, $event)">4 oz</a>
+                    <a href="#" class="button button-raised button-fill color-green" @click="addCoffee(6, $event)">6 oz</a>
+                    <a href="#" class="button button-raised button-fill color-blue" @click="addCoffee(8, $event)">8 oz</a>
                   </p>
                   <p class="buttons-row">
-                    <a href="#" class="button button-raised button-fill color-orange">10 oz</a>
-                    <a href="#" class="button button-raised button-fill color-pink">12 oz</a>
-                    <a href="#" class="button button-raised button-fill color-purple">16 oz</a>
+                    <a href="#" class="button button-raised button-fill color-orange" @click="addCoffee(10, $event)">10 oz</a>
+                    <a href="#" class="button button-raised button-fill color-pink" @click="addCoffee(12, $event)">12 oz</a>
+                    <a href="#" class="button button-raised button-fill color-purple" @click="addCoffee(16, $event)">16 oz</a>
                   </p>
                   <!-- <img style="width: 10%;" src="./assets/coffee-cup.png" /> -->
                 </div>
@@ -316,12 +320,25 @@ export default {
     {
       evt.preventDefault();
       this.mainView.router.load({pageName: pageName});
+    },
+    addCoffee: function(oz, evt){
+      this.mainView.router.load({pageName: 'index'});
     }
   }
 }
 </script>
 
 <style>
+  h1 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .subheading {
+    display:block;
+    width: 100%;
+    text-align: center;
+  }
+
   .notifications {
     z-index: 11001; /* one higher than sign-in screen */
   }
