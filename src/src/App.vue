@@ -22,7 +22,7 @@
               <div class="list-block">
                 <div class="list-block-label">
                   <p>Some text with login information.</p>
-                  <p><a href="#" class="close-login-screen">Close Login Screen</a></p>
+                  <p><a href="#" @click="closeLoginScreen">Close Login Screen</a></p>
                 </div>
               </div>
 
@@ -221,16 +221,55 @@ export default {
   methods: {
     signIn: function(evt)
     {
+      var vm = this;
+
+      // Min 4 numbers
+      if(this.pin.length != 4)
+      { 
+        this.signInFail();
+        return;
+      }
+
+      $$.ajax({
+        //method: "POST",
+        //url: 'http://localhost:3000/account/signin',
+        method: "GET",
+        url: "http://localhost:3000/success/1",
+        data: { userId: vm.activeUser.Id, pin: vm.pin },
+        cache: false,
+        success: vm.signInSuccess,
+        error: vm.signInFail
+      });
+    },
+    signInSuccess: function(data, status, xhr)
+    {
       var loginScreen = this.myApp.loginScreen();
       this.myApp.closeModal(loginScreen);
+      this.closeAllNotifications();
       this.mainView.router.load({pageName: 'questions'});
+    },
+    signInFail: function(xhr, status){
+      this.myApp.addNotification({
+          message: 'Incorrect Pin Number'
+      });
+      this.pin = "";
     },
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
     },
+    closeAllNotifications: function()
     {
-      // todo: set user attempting to auth
-      // Open pin screen
+      var vm = this;
+      $$(".notification-item").each(function(index, notificationElement){
+        vm.myApp.closeNotification(notificationElement);
+      });
+    },
+    closeLoginScreen: function(evt){
+      evt.preventDefault();
+      this.closeAllNotifications();
+      var loginScreen = this.myApp.loginScreen();
+      this.myApp.closeModal(loginScreen);
+    },
     userTapped: function(user, evt)
     {
       this.activeUser = user;
@@ -268,6 +307,10 @@ export default {
 </script>
 
 <style>
+  .notifications {
+    z-index: 11001; /* one higher than sign-in screen */
+  }
+
   .pin-placeholder {
     width: 50px;
     height: 50px;
