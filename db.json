@@ -9,6 +9,9 @@
     { "id": 4, "name": "Sean O'Callahan", "userPicUrl": "https://api.adorable.io/avatars/80/socallahan%40gohomeside.com", 
       "coffeeToday": 40, "lastCoffee": "", "waterToday": 0, "lastWater": "" }
   ],
+  "success": [
+  	{ "id": 1, "response": "Pin number is a match"}
+  ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
