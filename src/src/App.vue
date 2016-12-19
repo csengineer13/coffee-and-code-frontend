@@ -206,16 +206,30 @@ export default {
   },
   mounted: function()
   {
+    var vm = this;
+
     /* Init Framework7 */
     this.myApp = new window.Framework7({
         root: '#app',               // Vue is not a fan of mounting to body
         material: true,             // Android
         materialPageLoadDelay: 50,  // Performance increase
-        domCache: true              // https://framework7.io/docs/pages-inline.html
+        domCache: true,             // https://framework7.io/docs/pages-inline.html
+        preroute: function (view, options) {
+          if(options.pageName == 'index'){
+            vm.refreshUsers();
+          }
+          //return false; //required to prevent default router action
+          return true;
+        }
     });
 
     /* Init Main View */
     this.mainView = this.myApp.addView('.view-main', {});
+    vm.refreshUsers();
+
+    /* Page Callbacks */
+    // Important for binding as content is added/removed from DOM
+    // http://framework7.io/docs/pages.html
 
   }, // mounted
   methods: {
@@ -266,6 +280,7 @@ export default {
     },
     closeLoginScreen: function(evt){
       evt.preventDefault();
+      this.pin = "";
       this.closeAllNotifications();
       var loginScreen = this.myApp.loginScreen();
       this.myApp.closeModal(loginScreen);
