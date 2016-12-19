@@ -159,7 +159,7 @@
 
                   <li v-for="user in users">
                     <media-list-item
-                      @click.native="userTapped"
+                      @click.native="userTapped(user, $event)"
                       v-bind:media-image="user.userPicUrl"
                       v-bind:name="user.name"
                     ></media-list-item>
@@ -200,6 +200,7 @@ export default {
       myApp: undefined,
       mainView: undefined,
       users: [],
+      activeUser: {},
       pin: ""
     }
   },
@@ -227,10 +228,12 @@ export default {
     signOut: function(evt){
       this.mainView.router.load({pageName: 'index'});
     },
-    userTapped: function(evt)
     {
       // todo: set user attempting to auth
       // Open pin screen
+    userTapped: function(user, evt)
+    {
+      this.activeUser = user;
       this.myApp.loginScreen();
     },
     clearPinNumberTapped: function(){
